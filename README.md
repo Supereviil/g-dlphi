@@ -1,46 +1,48 @@
-# gdlEX — The Over‑Engineered Companion App for gallery-dl  
-gdlEX is a Windows control layer for gallery‑dl: queueing, automation, post‑processing, session tracking, and a UI that makes large download jobs manageable. No gimmicks. Just tools.
+# gdlEX: The Windows UI gallery‑dl Should Have Had
+gdlEX takes gallery‑dl, wraps it in a proper Windows interface, adds automation and post‑processing, and removes the part where you have to pretend the command line is fun to use.
 
-🏛️ Assembled in Delphi because I refuse to suffer.
+<img width="811" height="494" alt="Screenshot00" src="https://github.com/user-attachments/assets/5da6fb5f-f3b2-4129-899b-3ab0263cdb93" />
 
-<img width="700" height="436" alt="screenshot2" src="https://github.com/user-attachments/assets/cd053b38-8732-411b-bf9a-6d3b157fa74e" />
+🏛️ Built in Delphi because I don’t want my UI to be a web page cosplaying as an app.
 
 ---
 
 ## 🧩 What gdlEX Actually Does
-gdlEX wraps gallery-dl in a clean, Windows-native interface and then piles on:
+gdlEX wraps gallery‑dl in a clean Windows interface and adds an entire ecosystem of features on top:
 
 - Queue management  
 - Automation (watch folders, scheduling, cookie rotation)  
-- Post-processing (rename engine, CBZ creation, cleanup)  
-- Privacy tools  
+- Post‑processing (rename engine, CBZ creation, cleanup)  
+- Privacy mode  
 - Session tracking  
-- Optional integrations (FFmpeg, yt-dlp, webhooks)
+- Optional integrations (FFmpeg, yt‑dlp, webhooks)
+
+gdlEX is what gallery‑dl looks like after someone who likes Windows apps gets involved.
 
 ---
 
-# 🚀 Features Overview  
-To avoid confusion, here are the two worlds gdlEX works in:
+# 🚀 Features Overview
+gdlEX operates in two worlds:
 
-1. **gallery-dl features** — the raw power  
-2. **gdlEX-exclusive features** — the quality-of-life magic
+1. **gallery‑dl features** — the raw power  
+2. **gdlEX-exclusive features** — the quality‑of‑life magic
 
 ---
 
-# 1️⃣ Features Powered by gallery-dl  
-These are native gallery-dl capabilities, just presented in a way that won’t make your eyes bleed.
+# 1️⃣ Features Powered by gallery‑dl
+These are native gallery‑dl capabilities, presented in a way that will make you less prone to self-harm.
 
 ### Download Modes
 - Single URL  
 - Multi‑URL queue  
 - Text file input  
-- URL-only extraction  
-- Metadata-only JSON dump  
+- URL‑only extraction  
+- Metadata‑only JSON dump  
 
 ### Naming & Templates
 - Default templates  
 - Original filename  
-- ID-only  
+- ID‑only  
 - Date + filename  
 - Username + ID  
 - Category + ID  
@@ -69,17 +71,16 @@ These are native gallery-dl capabilities, just presented in a way that won’t m
 ---
 
 # 2️⃣ gdlEX Companion Features (The Fun Stuff)
-
-These features do **not** exist in gallery-dl.  
+These features do **not** exist in gallery‑dl. (The reason you're here)
 
 ## 🖥️ UI & Workflow
 - Modern Windows UI  
 - System tray integration  
 - Close-to-tray + notifications  
-- Styled output console with privacy filtering  
+- Styled output console with privacy filtering that hides your sins
 - Session resume  
 - Live file-type tally  
-- Output trimming that hides your sins  
+- Output trimming   
 
 ## ⚙️ Automation Engine
 - Watch Folder (auto-import URLs)  
@@ -89,7 +90,7 @@ These features do **not** exist in gallery-dl.
   - Open folder  
   - Play sound  
   - Run script  
-  - Or do nothing like a normal person  
+  - Or do nothing and get on with your life  
 
 ## 🧩 Post-Processing
 - Remove emoji  
@@ -125,17 +126,25 @@ These features do **not** exist in gallery-dl.
 
 ---
 
-# 🪟 Screenshots  
-*(Because people like pictures)*
+# 🪟 Screenshots
+*(Something Shiny)*
 
-<img width="700" height="436" alt="screenshot3" src="https://github.com/user-attachments/assets/f3e3d184-217e-4195-a830-aeff62575afb" />
-<img width="700" height="436" alt="screenshot1" src="https://github.com/user-attachments/assets/6e91f0e3-fae7-486d-8ac4-7e30927051e6" />
+<img width="811" height="494" alt="Screenshot00" src="https://github.com/user-attachments/assets/a38e18db-2fc8-4483-8340-311580886c08" />
+<img width="811" height="494" alt="Settings01" src="https://github.com/user-attachments/assets/c0b25a0f-73ea-4f3c-8a59-4e80d4bb6c2a" />
+<img width="811" height="494" alt="Settings02" src="https://github.com/user-attachments/assets/682444ad-de4d-42dd-83f6-895007e1a464" />
+<img width="811" height="494" alt="Settings03" src="https://github.com/user-attachments/assets/2f53fec9-cda3-408f-bec8-7c0d814994d9" />
+<img width="811" height="494" alt="Settings04" src="https://github.com/user-attachments/assets/a003e12a-f5e6-4cfd-90d7-79bc178c4083" />
+<img width="811" height="494" alt="Settings05" src="https://github.com/user-attachments/assets/a1b6d404-fe09-46c0-8e3d-731416ca7680" />
+<img width="797" height="487" alt="Settings06" src="https://github.com/user-attachments/assets/fab421aa-b3df-4e37-890e-5e9ab65f2626" />
+
+
 
 
 ---
 
 # 📦 Requirements
-- Windows 10 or later  
+- A desire to stop babysitting a text file full of command‑line voodoo
+- Windows 10 or later (ugh)  
 - `gallery-dl.exe` in the same folder as gdlEX  
 - Optional:  
   - `ffmpeg.exe`  
@@ -144,26 +153,26 @@ These features do **not** exist in gallery-dl.
 
 ---
 
-# 📥 Download  
+# 📥 Download
 Grab the latest release here:  
 https://github.com/Supereviil/gdlEX/releases
 
 ---
 
-# ❤️ Support Development  
+# ❤️ Support Development
 If gdlEX saved you time, sanity, or wrist strain:
 
 **Ko‑fi:** https://ko-fi.com/superevil
 
-Every donation goes toward more utilities, more polish, and more over‑engineering, and a MacBook Neo for cross platform development.
+Every donation goes toward more utilities, more polish, more over‑engineering, and eventually a MacBook Neo for cross‑platform development.
 
 ---
 
-# 📄 License  
+# 📄 License
 MIT License
 
 ---
 
-# 🙌 Credits  
+# 🙌 Credits
 - **gallery-dl** by mikf — the powerhouse doing the heavy lifting  
-- **gdlEX** by Superevil Enterprises — the companion app, UI, automation, and general mischief  
+- **gdlEX** by Superevil Enterprises — the companion app, UI, automation, and general bad attitude
