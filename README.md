@@ -1,133 +1,107 @@
 # gdlEX: The Windows UI gallery‑dl Should Have Had
-gdlEX takes gallery‑dl, wraps it in a proper Windows interface, adds automation and post‑processing, and removes the part where you have to pretend the command line is fun to use.
+
+gdlEX takes gallery‑dl, wraps it in a proper Windows interface, adds automation and a thread-safe post‑processing engine, and removes the part where you have to pretend the command line is fun to use.
 
 <img width="811" height="494" alt="Screenshot00" src="https://github.com/user-attachments/assets/5da6fb5f-f3b2-4129-899b-3ab0263cdb93" />
 
-🏛️ Built in Delphi because I don’t want my UI to be a web page cosplaying as an app.
+🏛️ **Built natively in Delphi**—because I don’t want my UI to be a web page cosplaying as an app. 
 
 ---
 
 ## 🧩 What gdlEX Actually Does
-gdlEX wraps gallery‑dl in a clean Windows interface and adds an entire ecosystem of features on top:
+gdlEX wraps gallery‑dl in an ultra-lean Windows interface (using a microscopic 12MB of RAM) and adds an entire ecosystem of companion features:
 
-- Queue management  
-- Automation (watch folders, scheduling, cookie rotation)  
-- Post‑processing (rename engine, CBZ creation, cleanup)  
-- Privacy mode  
-- Session tracking  
-- Optional integrations (FFmpeg, yt‑dlp, webhooks)
+- **Queue Management** — Full multi-URL queue automation.
+- **Automation Engine** — Watch folders for auto-importing, daily scheduling, and smart cookie rotation.
+- **Thread-Safe Post‑Processing** — Background filename sanitation, automatic extension swapping, and empty-folder cleanup.
+- **Privacy Mode** — Real-time console masking that redacts URLs and file paths on the fly.
+- **Comic Archiving** — Automatic sequential folder conversion into standard `.cbz` archives.
+- **Integrations** — Native hooks for FFmpeg, yt‑dlp fallbacks, and real-time webhook status notifications.
 
-gdlEX is what gallery‑dl looks like after someone who likes Windows apps gets involved.
+gdlEX is what gallery‑dl looks like after someone who actually likes native Windows apps gets involved.
 
 ---
 
-# 🚀 Features Overview
+## 🚀 Features Overview
 gdlEX operates in two worlds:
-
-1. **gallery‑dl features** — the raw power  
-2. **gdlEX-exclusive features** — the quality‑of‑life magic
-
----
-
-# 1️⃣ Features Powered by gallery‑dl
-These are native gallery‑dl capabilities, presented in a way that will make you less prone to self-harm.
-
-### Download Modes
-- Single URL  
-- Multi‑URL queue  
-- Text file input  
-- URL‑only extraction  
-- Metadata‑only JSON dump  
-
-### Naming & Templates
-- Default templates  
-- Original filename  
-- ID‑only  
-- Date + filename  
-- Username + ID  
-- Category + ID  
-- Custom template input  
-
-### Filtering & Rules
-- File filter expressions  
-- Date before / after  
-- File range  
-- Min/max size  
-- MIME type filtering  
-
-### Network Options
-- Retries, timeout, sleep, rate limit  
-- Proxy support  
-- Custom User-Agent  
-- IPv4/IPv6 forcing  
-- SSL bypass  
-
-### Authentication
-- OAuth  
-- API key  
-- Browser cookie extraction  
-- Cookies.txt rotation  
+1. **gallery‑dl features** — the raw backend power, exposed gracefully.
+2. **gdlEX-exclusive features** — the quality‑of‑life desktop magic.
 
 ---
 
-# 2️⃣ gdlEX Companion Features (The Fun Stuff)
-These features do **not** exist in gallery‑dl. (The reason you're here)
+### 1️⃣ Features Powered by gallery‑dl
+These are native gallery‑dl capabilities, presented in a way that won't make you want to throw your monitor out a window.
 
-## 🖥️ UI & Workflow
-- Modern Windows UI  
-- System tray integration  
-- Close-to-tray + notifications  
-- Styled output console with privacy filtering that hides your sins
-- Session resume  
-- Live file-type tally  
-- Output trimming   
+#### Download Modes
+* Single URL execution
+* Multi‑URL queue tracking
+* Text file bulk input (`.txt`, `.lst`, `.url`, `.gdl`, `.csv`)
+* URL‑only extraction (simulation testing)
+* Metadata‑only raw JSON dumping
 
-## ⚙️ Automation Engine
-- Watch Folder (auto-import URLs)  
-- Daily scheduler  
-- Auto-run queue  
-- Completion actions:  
-  - Open folder  
-  - Play sound  
-  - Run script  
-  - Or do nothing and get on with your life  
+#### Naming & Templates
+* Default gallery-dl directory hierarchies
+* Original source filename preservation
+* Unique ID‑only naming
+* Date + filename prepending
+* Username + ID structures
+* Category + ID structures
+* Custom string template rule engine
 
-## 🧩 Post-Processing
-- Remove emoji  
-- Remove punctuation  
-- Remove spaces  
-- Trim filename length  
-- Remove custom substring  
-- Extension swap (jpeg → jpg, etc.)  
-- Rename-on-failure  
-- Automatic CBZ creation  
-- Empty-folder cleanup  
-- Windows-safe path handling  
+#### Filtering & Rules
+* Metadata filter expressions (e.g., `width >= 1920`)
+* Strict date range boundaries (before / after constraints)
+* Sequential file range clamping
+* Min/max file size throttling (in bytes)
+* MIME type content filtering
 
-## 🔄 Session Intelligence
-- Files processed  
-- CBZ archives created  
-- Success/failure state  
-- Session receipts  
-- Optional logs  
-- Download archive support  
-- File-type summary  
+#### Network & Security
+* Max retry limits, request timeouts, and native rate-limiting
+* Custom user-agent spoofing
+* Force IPv4 or IPv6 routing
+* Proxy routing configurations
+* Insecure SSL certificate validation bypasses
 
-## 🌐 Integrations
-- FFmpeg (optional)  
-- yt-dlp fallback  
-- Webhook notifications  
+#### Authentication
+* Static OAuth bearer tokens
+* Dedicated API keys
+* Automated browser cookie extraction (Chrome, Edge, Firefox, Brave, Vivaldi, etc.)
+* Netscape-format `cookies.txt` file rotation loops
 
-## 🔒 Privacy Mode
-- Hides sensitive output  
-- Redacts URLs and arguments  
-- Replaces filenames with a tally  
-- Keeps logs clean unless you ask otherwise  
+---
+
+### 2️⃣ gdlEX Companion Features (The Fun Stuff)
+These features do **not** exist in gallery‑dl. This is the code that saves your sanity.
+
+#### 🖥️ Native UI & Workflow
+* Pure Win32 compiled assembly—no Electron, no web runtime, instant start.
+* Deep system tray integration with custom task notifications.
+* Close-to-tray background execution mode.
+* Multi-session crash resilience and automatic job resumption.
+* Live file-type count tallying directly in the UI.
+* Dynamic terminal output pruning (keeps text buffer lean under massive loops).
+
+#### ⚙️ Automation Engine
+* **Active Watch Folders:** Automatically ingests and processes text files dropped into monitored directories.
+* **Daily Scheduler:** Set specific times for heavy scraping queues to fire off.
+* **Completion Actions:** Trigger a folder opening, play a system alert sound, run a custom cleanup script, or simply do nothing and get on with your life.
+
+#### 🧩 Asynchronous Post-Processing
+* **Thread-Isolated Execution:** Heavy I/O processing runs on optimized background threads, keeping the UI perfectly responsive.
+* **Filename Sanitation:** One-click removal of emojis, punctuation, symbols, and double spaces.
+* **String Scrubbing:** Automatic truncation to custom character limits and mass substring removal.
+* **Extension Swapping:** Corrects irregular media containers without messing with file headers (e.g., `jpeg` → `jpg`).
+* **Clean Exit Architecture:** Automated post-download verification, empty sub-folder pruning, and Windows-safe path sanitation.
+
+#### 🔄 Session Intelligence
+* Live counters tracking total files processed and CBZ archives created.
+* Granular success/failure error state evaluation.
+* Automated end-of-run Session Receipts and execution logs written straight to output.
 
 ---
 
 # 🪟 Screenshots
-*(Something Shiny)*
+*(The Shiny Stuff)*
 
 <img width="811" height="494" alt="Screenshot00" src="https://github.com/user-attachments/assets/a38e18db-2fc8-4483-8340-311580886c08" />
 <img width="811" height="494" alt="Settings01" src="https://github.com/user-attachments/assets/c0b25a0f-73ea-4f3c-8a59-4e80d4bb6c2a" />
@@ -137,42 +111,51 @@ These features do **not** exist in gallery‑dl. (The reason you're here)
 <img width="811" height="494" alt="Settings05" src="https://github.com/user-attachments/assets/a1b6d404-fe09-46c0-8e3d-731416ca7680" />
 <img width="797" height="487" alt="Settings06" src="https://github.com/user-attachments/assets/fab421aa-b3df-4e37-890e-5e9ab65f2626" />
 
-
-
-
 ---
 
-# 📦 Requirements
-- A desire to stop babysitting a text file full of command‑line voodoo
-- Windows 10 or later (ugh)  
-- `gallery-dl.exe` in the same folder as gdlEX  
-- Optional:  
-  - `ffmpeg.exe`  
-  - `yt-dlp.exe`  
-  - Cookies.txt or browser profile access  
+# 📦 Requirements & Installation
+
+1. Download gdlEX.
+2. Drop `gallery-dl.exe` into the same folder.
+3. Stop babysitting a terminal text block.
+
+```text
+gdlEX/
+├── gdlEX.exe
+└── gallery-dl.exe
+
+```
+
+* **OS Support:** Windows 10 or later (ugh).
+* **Optional Binaries:** Drop `ffmpeg.exe` or `yt-dlp.exe` in the path if you want post-download conversion or advanced streaming extraction options.
 
 ---
 
 # 📥 Download
-Grab the latest release here:  
+
+Grab the latest release here:
+
 https://github.com/Supereviil/gdlEX/releases
 
 ---
 
 # ❤️ Support Development
+
 If gdlEX saved you time, sanity, or wrist strain:
 
 **Ko‑fi:** https://ko-fi.com/superevil
 
-Every donation goes toward more utilities, more polish, more over‑engineering, and eventually a MacBook Neo for cross‑platform development.
+Every donation goes toward more utilities, more polish, more over‑engineering, and keeping native desktop tool development alive.
 
 ---
 
 # 📄 License
-MIT License
+
+gdlEX is released under the **MIT License**.
 
 ---
 
 # 🙌 Credits
-- **gallery-dl** by mikf — the powerhouse doing the heavy lifting  
-- **gdlEX** by Superevil Enterprises — the companion app, UI, automation, and general bad attitude
+
+* **gallery-dl** by mikf — the powerhouse doing the heavy lifting.
+* **gdlEX** by Superevil Enterprises — the companion app, UI, automation, and general bad attitude.
